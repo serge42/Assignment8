@@ -4,24 +4,42 @@ xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>HelloWorldWeb-FC</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>faces/index.xhtml</welcome-file>
   </welcome-file-list>
   
+  <servlet>
+  	<servlet-name>Faces Servlet</servlet-name>
+  	<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Faces Servlet</servlet-name>
+  	<url-pattern>/faces/*</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+      <servlet-name>Faces Servlet</servlet-name>
+      <url-pattern>*.jsf</url-pattern>
+   </servlet-mapping>
+   <servlet-mapping>
+      <servlet-name>Faces Servlet</servlet-name>
+      <url-pattern>*.faces</url-pattern>
+   </servlet-mapping>
+   <servlet-mapping>
+      <servlet-name>Faces Servlet</servlet-name>
+      <url-pattern>*.xhtml</url-pattern>
+   </servlet-mapping>
+  
   <context-param>
-  	<param-name>dbURL</param-name>
-  	<param-value>jdbc:mysql://localhost/mysql_db</param-value>
+  	<param-name>dbUrl</param-name>
+  	<param-value>jdbc:sqlite:/Users/sebastien/Documents/USI/Autumn19/SoftwareEngineering/workspaceControllerApps/Assignment8/LoginController/sqlite/user.db</param-value>
   </context-param>
   <context-param>
   	<param-name>dbUser</param-name>
-  	<param-value>mysql_user</param-value>
+  	<param-value>sql_user</param-value>
   </context-param>
   <context-param>
   <param-name>dbUserPwd</param-name>
-  <param-value>mysql_pwd</param-value>
+  <param-value>sql_pwd</param-value>
   </context-param>
 </web-app>

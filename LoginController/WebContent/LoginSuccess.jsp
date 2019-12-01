@@ -3,10 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" content="text/html">
 <title>Login success</title>
 </head>
 <body>
+You are logged in <br/><br/>
 
+Search user: TODO
 </body>
 </html>
