@@ -7,7 +7,7 @@
 <title>Login success</title>
 </head>
 <body>
-You are logged in <br/>
+You are logged in <br/><br/>
 
 Search user: TODO
 </body>
